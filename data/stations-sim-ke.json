@@ -1,0 +1,42 @@
+[{
+ "8181": {
+    "id": 1001,
+    "port": 8181,
+    "name": "Simulated Station 1 - Kisumu",
+    "country": "KE",
+    "coord": {
+      "lon": 34.761711,
+      "lat": -0.10221
+    }
+  },
+ "8182": {
+    "id": 1002,
+    "port": 8182,
+    "name": "Simulated Station 2 - Rongai",
+    "country": "KE",
+    "coord": {
+      "lon": 35.863819,
+      "lat": -0.17333
+    }
+  },
+ "8183": {
+    "id": 1003,
+    "port": 8183,
+    "name": "Simulated Station 3 - Kitui",
+    "country": "KE",
+    "coord": {
+      "lon": 38.010559,
+      "lat": -1.36696
+    }
+  },
+"8184":{
+    "id": 1004,
+    "port": 8184,
+    "name": "Simulated Station 4 - Magadi",
+    "country": "KE",
+    "coord": {
+      "lon": 36.286999,
+      "lat": -1.90122
+    }
+  }
+}]

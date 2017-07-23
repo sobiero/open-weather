@@ -1,6 +1,6 @@
 {
   "name": "openweather",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "tether": "latest",
@@ -12,8 +12,9 @@
     "highcharts": "latest",
     "leaflet": "latest",
     "heatmap.js-amd": "latest",
-    "esri-leaflet": "latest"
-
+    "esri-leaflet": "latest",
+    "socket.io-client": "^2.0.3",
+    "socket-io": "^1.0.0"
   },
   "private": true
 }

@@ -4,11 +4,22 @@ $(function(){
 		cache['m'] = L.map('map').setView([0, 38],6);
 		//cache['m'].fitWorld(); //.zoomIn(), {renderer: L.canvas()} 
 
-	L.esri.tiledMapLayer({
+	
+    /*
+    L.esri.tiledMapLayer({
 			url: "https://unepliveservices.unep.org/arcgis/rest/services/UNBASEMAP_FINAL/MapServer", 
 			minZoom:2,
 			attribution: 'Imagery &copy; United Nations Basemap | Geocoding by ESRI'
 	}).addTo( cache['m'] );
+
+    */
+
+    L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+    }).addTo( cache['m'] );
+
+
 
     $.get( "data/stations-ke.json", function() {
 	})
@@ -22,9 +33,6 @@ $(function(){
 		 //html = $('<p>').data('id', value.id).html( value.name );
 		 html = '<p data-id="' + value.id + '">' + value.name + '</p>';
 
-
-
-		  
           addStation( latLon , html );
 
 		});
@@ -35,11 +43,6 @@ $(function(){
 		
 	});
 	
-	
-    
-
-
-
 
 });
 

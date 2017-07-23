@@ -14,9 +14,12 @@
     <title>Openweather API</title>
 
     <!-- Icons -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+	<link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/simple-line-icons.css" rel="stylesheet">
     <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet">
+    
+	<link href="vendor/leaflet-markers/leaflet.awesome-markers.css" rel="stylesheet">
 
     <!-- Main styles for this application -->
     <link href="css/style.css" rel="stylesheet">
@@ -134,6 +137,10 @@
 
 					<li class="nav-item">
                         <a class="nav-link" href="?page=humidity"><i class="icon-pie-chart"></i> Humidity map</a>
+                    </li>
+
+					<li class="nav-item">
+                        <a class="nav-link" href="?page=simulation"><i class="icon-pie-chart"></i>Simulation</a>
                     </li>
 
                 </ul>
@@ -257,9 +264,12 @@
     <script src="bower_components/pace/pace.min.js"></script>
     <script src="bower_components/highcharts/highcharts.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="vendor/leaflet-heat.js"></script>
     <script src="bower_components/heatmap.js-amd/build/heatmap.js"></script>
     <script src="bower_components/esri-leaflet/dist/esri-leaflet.js"></script>
+    <script src="bower_components/socket.io-client/dist/socket.io.js"></script>
 
+    <script src="vendor/leaflet-markers/leaflet.awesome-markers.js"></script>
 
     <!-- Plugins and scripts required by all views -->
     <script src="bower_components/chart.js/dist/Chart.min.js"></script>
@@ -277,9 +287,11 @@
 
     <!-- Custom scripts required by this view -->
     <!-- <script src="js/views/main.js"></script> -->
-    <script src="js/views/nodes.js"></script>
+    <!-- <script src="js/views/nodes.js"></script>
     <script src="js/views/heatmap.js"></script>
+    <script src="js/views/simulation.js"></script> -->
 
+    <script src="js/views/<?= empty($_GET['page']) ? 'nodes' : $_GET['page'] ?>.js"></script>
 
 </body>
 
